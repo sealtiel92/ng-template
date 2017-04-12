@@ -1,0 +1,85 @@
+<div class="login-content">
+	<!-- Login -->           
+	<md-card class="lc-block" [class.toggled]="login" *ngIf="login">
+		<div class="input-group m-b-20">
+			<span class="input-group-addon"><md-icon>perm_identity</md-icon></span>
+			<div class="fg-line">
+					<input type="text" class="form-control" placeholder="Username" [(ngModel)]="model.email">
+			</div>
+		</div>  
+		<div class="input-group m-b-20">
+			<span class="input-group-addon"><md-icon>lock_outline</md-icon></span>
+				<div class="fg-line">
+						<input type="password" class="form-control" placeholder="Password" [(ngModel)]="model.password">
+				</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="checkbox">
+				<label>
+						<input type="checkbox" value="">
+						<i class="input-helper"></i>
+						Keep me signed in
+				</label>
+		</div>
+		<button md-fab class=" btn-login btn-float" (click)="onLogin()">
+			<md-icon>arrow_forward</md-icon>
+		</button>
+		<ul class="login-navigation">
+				<li data-block="#l-register" class="bgm-red" (click)="login = false; register = true">Register</li>
+				<li data-block="#l-forget-password" class="bgm-orange" (click)="login = false; forgot = true">Forgot Password?</li>
+		</ul>
+	</md-card>
+	<!-- Register -->
+	<md-card class="lc-block" [class.toggled]="register" *ngIf="register">
+		<div class="input-group m-b-20">
+				<span class="input-group-addon"><md-icon>perm_identity</md-icon></span>
+				<div class="fg-line">
+						<input type="text" class="form-control" placeholder="Username">   
+				</div>
+		</div>
+		<div class="input-group m-b-20">
+				<span class="input-group-addon"><md-icon>email</md-icon></span>
+				<div class="fg-line">
+						<input type="text" class="form-control" placeholder="Email Address">
+				</div>
+		</div>
+		<div class="input-group m-b-20">
+				<span class="input-group-addon"><md-icon>lock_outline</md-icon></span>
+				<div class="fg-line">
+						<input type="password" class="form-control" placeholder="Password">
+				</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="checkbox">
+				<label>
+						<input type="checkbox" value="">
+						<i class="input-helper"></i>
+						Accept the license agreement
+				</label>
+		</div>
+		<button md-fab class=" btn-login btn-float">
+			<md-icon>arrow_forward</md-icon>
+		</button>
+		<ul class="login-navigation">
+				<li data-block="#l-login" class="bgm-green" (click)="register = false; login = true">Login</li>
+				<li data-block="#l-forget-password" class="bgm-orange" (click)="register = false; forgot = true">Forgot Password?</li>
+		</ul>
+	</md-card>
+	<!-- Forgot Password -->
+	<md-card class="lc-block" [class.toggled]="forgot" *ngIf="forgot">
+		<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu risus. Curabitur commodo lorem fringilla enim feugiat commodo sed ac lacus.</p>
+		<div class="input-group m-b-20">
+				<span class="input-group-addon"><md-icon>email</md-icon></span>
+				<div class="fg-line">
+						<input type="text" class="form-control" placeholder="Email Address">
+				</div>
+		</div>
+		<button md-fab class=" btn-login btn-float">
+			<md-icon>arrow_forward</md-icon>
+		</button>
+		<ul class="login-navigation">
+				<li data-block="#l-login" class="bgm-green" (click)="forgot = false; login = true">Login</li>
+				<li data-block="#l-register" class="bgm-red" (click)="forgot = false; register = true">Register</li>
+		</ul>
+	</md-card>
+</div>

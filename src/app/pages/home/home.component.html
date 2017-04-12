@@ -1,0 +1,27 @@
+<section class="content">
+    <header class="content__title">
+        <h1>Home</h1>
+        <div class="actions">
+            <a class="actions__item zmdi zmdi-trending-up" [routerLink]="['/home']"></a>
+            <a class="actions__item zmdi zmdi-check-all" [routerLink]="['/home']"></a>
+            <div dropdown>
+                <i dropdownToggle class="actions__item zmdi zmdi-more-vert"></i>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a [routerLink]="['/home']" class="dropdown-item">Refresh</a>
+                    <a [routerLink]="['/home']" class="dropdown-item">Manage Widgets</a>
+                    <a [routerLink]="['/home']" class="dropdown-item">Settings</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row dashboard">
+        <div class="dashboard__column">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Sales Statistics</h2>
+                    <small class="card-subtitle">Vestibulum purus quam scelerisque, mollis nonummy metus</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

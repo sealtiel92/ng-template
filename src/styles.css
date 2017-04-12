@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@media (min-width: 1200px){
+    .content {
+        padding: 8.1rem 2.5rem 0 23.5rem;
+    }
+}
+@media (max-width: 1199px){
+    .navigation:not(.navigation--toggled) {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+@media (max-width: 1199px){
+    .navigation{
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+    }
+}
+@media (max-width: 1199px) and (min-width: 576px){
+    .content {
+        padding: 8.1rem 2.5rem 0;
+    }
+}
+
+.content__title > h1 {
+    line-height: 100%;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: #777777;
+}
+.content__title {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+.dashboard {
+    margin: 0 -15px;
+}
+
+.navigation {
+    width: 21rem;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    padding-top: 5.1rem;
+    height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+.navigation__menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0 0 0;
+}
+.navigation-trigger[_ngcontent-wcm-11] {
+    float: left;
+    padding: 2rem 2rem 2rem 2.4rem;
+    margin-left: -2rem;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+.navigation-trigger__line[_ngcontent-c2]:not(:last-child) {
+    margin-bottom: 3px;
+}
+.navigation-trigger__line[_ngcontent-c2] {
+    height: 2px;
+    background-color: #FFFFFF;
+    display: block;
+    position: relative;
+}
+.navigation-trigger[_ngcontent-wcm-11] {
+    float: left;
+    padding: 2rem 2rem 2rem 2.4rem;
+    margin-left: -2rem;
+}
+.navigation-trigger__inner[_ngcontent-wcm-11] {
+    position: relative;
+}
+.navigation-trigger__inner[_ngcontent-wcm-11]:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -11px;
+    top: -14px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+@media (min-width: 1200px){
+    .hidden-xl-up {
+        display: none !important;
+    }
+}
