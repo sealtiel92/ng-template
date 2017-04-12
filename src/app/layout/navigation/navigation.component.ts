@@ -49,4 +49,8 @@ export class NavigationComponent implements OnInit {
     ngOnInit() {
     }
 
+    toggleSidebarVisibility() {
+        this.sharedService.toggleSidebarVisibilty()
+    }
+
 }

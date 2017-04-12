@@ -1,5 +1,5 @@
 <aside class="navigation" [class.navigation--toggled]="sidebarVisible">
-    <ul class="navigation__menu">
+    <ul class="navigation__menu" (click)="toggleSidebarVisibility()">
         <li routerLinkActive="active"><a [routerLink]="['/home']"><i class="zmdi zmdi-home"></i> Home</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/profile']"><i class="zmdi zmdi-format-underlined"></i> Profile</a></li>
     </ul>
